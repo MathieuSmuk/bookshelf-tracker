@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title || "Books App" %></title>
+
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <script>
+    function confirmDelete() {
+      return confirm("Are you sure you want to delete this book?");
+    }
+  </script>
+  <body>
+    <!-- Header -->
+    <%- include("../partials/header") %>
+
+    <!-- Main Content -->
+    <main class="container page-content"><%- body %></main>
+
+    <!-- Footer -->
+    <%- include("../partials/footer") %>
+  </body>
+</html>
