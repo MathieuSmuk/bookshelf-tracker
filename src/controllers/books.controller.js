@@ -72,6 +72,11 @@ export async function getBook(req, res) {
 }
 
 export async function createBook(req, res) {
+  // Prevent permanent database writes on live production site
+  if (process.env.NODE_ENV === "production") {
+    return res.redirect("/books");
+  }
+
   try {
     await createBookModel(req.body);
 
@@ -115,6 +120,11 @@ export async function getEditForm(req, res) {
 }
 
 export async function updateBook(req, res) {
+  // Prevent permanent database writes on live production site
+  if (process.env.NODE_ENV === "production") {
+    return res.redirect("/books");
+  }
+
   try {
     const { id } = req.params;
     const updatedBook = await updateBookModel(id, req.body);
@@ -185,6 +195,11 @@ export async function patchBookController(req, res) {
 }
 
 export async function deleteBook(req, res) {
+  // Prevent permanent database writes on live production site
+  if (process.env.NODE_ENV === "production") {
+    return res.redirect("/books");
+  }
+
   try {
     const { id } = req.params;
     const deletedBook = await deleteBookModel(id);

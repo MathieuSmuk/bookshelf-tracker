@@ -16,6 +16,13 @@
     <!-- Header -->
     <%- include("../partials/header") %>
 
+    <!-- Demo Banner -->
+    <% if (process.env.NODE_ENV === "production") { %>
+      <div class="demo-banner">
+        Demo Mode: Changes are not permanently saved.
+      </div>
+    <% } %>
+
     <!-- Main Content -->
     <main class="container page-content"><%- body %></main>
 
