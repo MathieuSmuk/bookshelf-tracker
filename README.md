@@ -57,12 +57,15 @@ Built using Node.js, Express, EJS, PostgreSQL, and deployed with Render + Neon.
 
 ---
 
-# Screenshots
+## Screenshots
 
-```markdown
-![Home Page](./public/images/screenshot-home.png)
-![Add Page](./public/images/screenshot-add.png)
-```
+### Library Page
+
+![Book Tracker library page showing saved books, ratings, and filtering controls](./public/images/screenshot-home.png)
+
+### Add Book Page
+
+![Add Book form with fields for book details, rating, completion date, and notes](./public/images/screenshot-add.png)
 
 ---
 
@@ -134,23 +137,18 @@ http://localhost:3000/books
 
 # Live Demo
 
-```text
-https://bookshelf-tracker.onrender.com
-```
+## Demo Link
+
+[Open the deployed Book Tracker](https://bookshelf-tracker.onrender.com)
 
 ---
 
-# API Used
+## API Used
 
-Open Library Covers API:
-
-https://openlibrary.org/dev/docs/api/covers
+Book covers are retrieved using the [Open Library Covers API](https://openlibrary.org/dev/docs/api/covers).
 
 ---
 
-# Author
+## Author
 
-Created by Mathieu Smuk
-
-GitHub:
-https://github.com/MathieuSmuk
+Created by [Mathieu Smuk](https://github.com/MathieuSmuk).
